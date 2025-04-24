@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ nucleo.get('nome') }} - {% endblock %}
+
+{% block content %}
+    <section class="nucleo-detalhe">
+        <h1>{{ nucleo.get('nome') }}</h1>
+        <p><strong>Responsável:</strong> {{ nucleo.get('responsavel') }}</p>
+        <p><strong>Contato:</strong> {{ nucleo.get('contato') }}</p>
+        <p><strong>Endereço:</strong> {{ nucleo.get('endereco') }}</p>
+        <p><strong>Horários:</strong> {{ nucleo.get('horarios') }}</p>
+        {% if nucleo.get('localizacao') %}
+        <p><strong>Localização:</strong> {{ nucleo.get('localizacao')|join(', ') }}</p>
+        {% endif %}
+        <p><a href="/nucleos">Voltar para a lista de núcleos</a></p>
+    </section>
+{% endblock %}

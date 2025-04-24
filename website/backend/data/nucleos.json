@@ -1,0 +1,81 @@
+{
+    "total_nucleos": 28,
+    "paises": [
+        {
+            "nome": "Brasil",
+            "estados": [
+                {
+                    "nome": "São Paulo",
+                    "nucleos": [
+                        {
+                            "nome": "Grupo Capoeira Resistência - São Paulo",
+                            "responsavel": "Mestre João Pequeno",
+                            "contato": "Email: resistencia.capoeira@mail.com",
+                            "endereco": "Rua da Bahia, 123, Centro Histórico, CEP 01001-000, São Paulo/SP",
+                            "horarios": "Segundas, Quartas e Sextas, 18h-20h",
+                            "localizacao": ["Brasil", "São Paulo", "São Paulo"]
+                        },
+                        {
+                            "nome": "Associação Cultural Senzala de Capoeira - Campinas",
+                            "responsavel": "Mestre Saci",
+                            "contato": "Telefone: (19) 9XXXX-XXXX",
+                            "endereco": "Avenida das Flores, 456, Jardim Primavera, CEP 13000-000, Campinas/SP",
+                            "horarios": "Terças e Quintas, 19h-21h",
+                            "localizacao": ["Brasil", "São Paulo", "Campinas"]
+                        }
+                    ]
+                },
+                {
+                    "nome": "Rio de Janeiro",
+                    "nucleos": [
+                        {
+                            "nome": "Grupo Ginga Carioca de Capoeira",
+                            "responsavel": "Contra-Mestre Lua",
+                            "contato": "Instagram: @gingacarioca",
+                            "endereco": "Praia de Copacabana, Quiosque 10, Copacabana, CEP 22000-000, Rio de Janeiro/RJ",
+                            "horarios": "Sábados, 10h-12h (ao ar livre)",
+                            "localizacao": ["Brasil", "Rio de Janeiro", "Rio de Janeiro"]
+                        }
+                    ]
+                }
+            ]
+
+        },
+        {
+            "nome": "Inglaterra",
+            "estados": [
+                {
+                    "nome": "Londres",
+                    "nucleos": [
+                        {
+                            "nome": "Grupo Capoeira Brasil - London",
+                            "responsavel": "Professor Formiga",
+                            "contato": "Email: london@capoeirabrasil.com",
+                            "endereco": "Unit 5, The Old Laundry, Southall, UB2 4SE, Londres, Reino Unido",
+                            "horarios": "Segundas e Quintas, 19:30-21:00",
+                            "localizacao": ["Inglaterra", "Londres", "Londres"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nome": "Alemanha",
+            "estados": [
+                {
+                    "nome": "Berlim",
+                    "nucleos": [
+                        {
+                            "nome": "Capoeira Angola Berlin e.V.",
+                            "responsavel": "Mestre Cobra Mansa (Supervisão)",
+                            "contato": "Website: www.capoeira-berlin.de",
+                            "endereco": "Brunnenstraße 183, 10119 Berlin, Alemanha",
+                            "horarios": "Quartas e Sextas, 20:00-22:00",
+                            "localizacao": ["Alemanha", "Berlim", "Berlim"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -23,6 +23,7 @@ class OGloboSpider(SitemapSpider):
 
     def parse(self, response):
         # A função parse_article extrai as informações da página de artigo
+        
         yield NewsItem(
             title=response.css('h1[itemprop="headline"]::text').get(),  # Melhor usar get() ao invés de extract_first()
             url=response.url,
@@ -30,7 +31,7 @@ class OGloboSpider(SitemapSpider):
             author=response.css('meta[itemprop="name"]::attr(content)').get(),
             lead=response.css('h2[itemprop="alternativeHeadline"]::text').get(),
             content=" ".join(response.css('div p.content-text__container::text').getall()),
-            html_content=str(response.body),
+            # html_content=str(response.body),
             tags=response.css(".bread-crumb-title a::text").getall(),
             image_urls=[item.attrib['src'] for item in response.css("#oglobo img")],
             source=response.css('meta[property="og:site_name"]').attrib["content"],

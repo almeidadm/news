@@ -1,0 +1,118 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Fonte moderna e legível */
+    margin: 2rem auto; /* Centralizar o conteúdo com margens laterais */
+    background-color: #fff;
+    color: #222; /* Texto preto bem escuro */
+    line-height: 1.7;
+    max-width: 140ch; /* Limitar a largura para melhor leitura */
+    padding: 1rem;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; 
+}
+
+header {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    align-items: center;
+    justify-content: center; 
+}
+
+img.logo {
+    max-width: 150px; /* Logo menor */
+    height: auto;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-horizontal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 3rem; /* Espaçamento entre os itens do menu */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-horizontal li a {
+    text-decoration: none;
+    color: #000000; /* Cor primária para links */
+    padding: 0.5rem 0;
+}
+
+.menu-horizontal li a:hover {
+    text-decoration: underline;
+}
+
+.country-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-left: 0.3rem solid #7b4b20; /* Destaque sutil para a seção */
+}
+
+.country-section h2 {
+    color: #222;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.state-container {
+    margin-top: 1rem;
+}
+
+.state-group {
+    margin-bottom: 1.5rem;
+}
+
+.state-group h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+}
+
+.nucleo-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.nucleo-item {
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px dotted #eee; /* Separador sutil */
+}
+
+.nucleo-item h4 {
+    color: #444;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.3rem;
+}
+
+.info {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+
+.info strong {
+    font-weight: bold;
+}
+
+.localizacao {
+    font-style: italic;
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 0.3rem;
+}
+
+/* Sem estilos complexos para responsividade além do básico */
+/* A centralização com max-width ajuda na leitura em telas maiores */

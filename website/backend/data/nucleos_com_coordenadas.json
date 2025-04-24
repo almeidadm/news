@@ -1,0 +1,241 @@
+{
+  "total_nucleos": 28,
+  "paises": [
+    {
+      "nome": "Brasil",
+      "estados": [
+        {
+          "nome": "São Paulo",
+          "nucleos": [
+            {
+              "nome": "São José dos Campos",
+              "responsavel": "Contra-Mestre Carla Natureza",
+              "contato": "Email: angoleirosdosertao.sjc@gmail.com",
+              "endereco": "São José dos Campos/SP",
+              "horarios": "Quartas 19h-21h",
+              "localizacao": [
+                "Brasil",
+                "São Paulo",
+                "São José dos Campos"
+              ],
+              "coordenadas": [
+                -23.179444,
+                -45.886944
+              ]
+            },
+            {
+              "nome": "Bauru",
+              "responsavel": "Mestre Tico",
+              "contato": "Telefone: (19) 9XXXX-XXXX",
+              "endereco": "Bauru/SP",
+              "horarios": "Sextas, 19h-21h",
+              "localizacao": [
+                "Brasil",
+                "São Paulo",
+                "Bauru"
+              ],
+              "coordenadas": [
+                -22.314722,
+                -49.060556
+              ]
+            },
+            {
+              "nome": "São Paulo",
+              "responsavel": "Treinel Coragem",
+              "contato": "Telefone: (19) 9XXXX-XXXX",
+              "endereco": "São Paulo/SP",
+              "horarios": "Sextas, 19h-21h",
+              "localizacao": [
+                "Brasil",
+                "São Paulo",
+                "São Paulo"
+              ],
+              "coordenadas": [
+                -23.5475000,
+                -46.6361100
+              ]
+            },
+            {
+              "nome": "São Sebastião",
+              "responsavel": "Contra-Mestre Alex Felix",
+              "contato": "Telefone: (19) 9XXXX-XXXX",
+              "endereco": "São Sebastião/SP",
+              "horarios": "Terças e Quintas, 19h-21h",
+              "localizacao": [
+                "Brasil",
+                "São Paulo",
+                "São Sebastião"
+              ],
+              "coordenadas": [
+                -23.76,
+                -45.409722
+              ]
+            },
+            {
+              "nome": "Grupo Capoeira Resistência - Rancharia",
+              "responsavel": "Mestre Xande",
+              "contato": "Telefone: (18) 9XXXX-XXXX",
+              "endereco": "Rancharia/SP",
+              "horarios": "Segundas e Quartas, 19h-21h",
+              "localizacao": ["Brasil", "São Paulo", "Rancharia"],
+              "coordenadas": [-22.2289, -50.8931]
+            },
+            {
+              "nome": "Grupo Capoeira Resistência - Presidente Prudente",
+              "responsavel": "Contra-Mestre Molejo",
+              "contato": "Telefone: (18) 9XXXX-XXXX",
+              "endereco": "Presidente Prudente/SP",
+              "horarios": "Terças e Quintas, 20h-22h",
+              "localizacao": ["Brasil", "São Paulo", "Presidente Prudente"],
+              "coordenadas": [-22.1257, -51.3890]
+            },
+            {
+              "nome": "Grupo Capoeira Resistência - Assis",
+              "responsavel": "Contra-Mestre Roceiro",
+              "contato": "Telefone: (18) 9XXXX-XXXX",
+              "endereco": "Assis/SP",
+              "horarios": "Quartas e Sextas, 18h-20h",
+              "localizacao": ["Brasil", "São Paulo", "Assis"],
+              "coordenadas": [-22.6619, -50.4122]
+            },
+            {
+              "nome": "Grupo Capoeira Resistência - Rio Claro",
+              "responsavel": "Treinel Sol",
+              "contato": "Telefone: (19) 9XXXX-XXXX",
+              "endereco": "Rio Claro/SP",
+              "horarios": "Segundas e Quintas, 19h30-21h30",
+              "localizacao": ["Brasil", "São Paulo", "Rio Claro"],
+              "coordenadas": [-22.4105, -47.5604]
+            }
+          ]
+        },
+        {
+          "nome": "Pernambuco",
+          "nucleos": [
+            {
+              "nome": "Grupo Capoeira Resistência - Recife",
+              "responsavel": "Treinel Caixa",
+              "contato": "Telefone: (81) 9XXXX-XXXX",
+              "endereco": "Recife/PE",
+              "horarios": "Terças e Sextas, 18h-20h",
+              "localizacao": ["Brasil", "Pernambuco", "Recife"],
+              "coordenadas": [-8.0543, -34.8813]
+            }
+          ]
+        },
+        {
+          "nome": "Bahia",
+          "nucleos": [
+            {
+              "nome": "Grupo Capoeira Resistência - Feira de Santana (Sede)",
+              "responsavel": "Treinel Hulluca",
+              "contato": "Telefone: (75) 9XXXX-XXXX",
+              "endereco": "Feira de Santana/BA",
+              "horarios": "Segundas e Quartas, 19h-21h",
+              "localizacao": ["Brasil", "Bahia", "Feira de Santana"],
+              "coordenadas": [-12.2568, -38.9604]
+            },
+            {
+              "nome": "Grupo Capoeira Resistência - Feira de Santana (Filial)",
+              "responsavel": "Mestre Claudinho",
+              "contato": "Telefone: (75) 9XXXX-XXXX",
+              "endereco": "Feira de Santana/BA",
+              "horarios": "Terças e Quintas, 18h30-20h30",
+              "localizacao": ["Brasil", "Bahia", "Feira de Santana"],
+              "coordenadas": [-12.2667, -38.9667]
+            }
+          ]
+        },
+        {
+          "nome": "Distrito Federal",
+          "nucleos": [
+            {
+              "nome": "Grupo Capoeira Resistência - Brasília",
+              "responsavel": "Contra-Mestre Minhoca",
+              "contato": "Telefone: (61) 9XXXX-XXXX",
+              "endereco": "Brasília/DF",
+              "horarios": "Quartas e Sábados, 19h-21h",
+              "localizacao": ["Brasil", "Distrito Federal", "Brasília"],
+              "coordenadas": [-15.7942, -47.8822]
+            }
+          ]
+        },
+        {
+          "nome": "Amazonas",
+          "nucleos": [
+            {
+              "nome": "Grupo Capoeira Resistência - Manaus",
+              "responsavel": "Mestre Zumbi",
+              "contato": "Telefone: (92) 9XXXX-XXXX",
+              "endereco": "Av. Eduardo Ribeiro, 520 - Centro, Manaus/AM",
+              "horarios": "Terças e Quintas, 18h-20h | Sábados, 9h-11h",
+              "localizacao": ["Brasil", "Amazonas", "Manaus"],
+              "coordenadas": [-3.1190, -60.0217]
+            },
+            {
+              "nome": "Grupo Capoeira Resistência - Tefé",
+              "responsavel": "Contra-Mestre Curumim",
+              "contato": "Telefone: (97) 9XXXX-XXXX",
+              "endereco": "Rua 29 de Março, 350 - Centro, Tefé/AM",
+              "horarios": "Segundas e Quartas, 17h30-19h30",
+              "localizacao": ["Brasil", "Amazonas", "Tefé"],
+              "coordenadas": [-3.3681, -64.7205]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Inglaterra",
+      "estados": [
+        {
+          "nome": "Londres",
+          "nucleos": [
+            {
+              "nome": "Contra-Mestre James Berimbau",
+              "responsavel": "Instagram: @jamesberimbau",
+              "contato": "Email: london@capoeirabrasil.com",
+              "endereco": "Unit 5, The Old Laundry, Southall, UB2 4SE, Londres, Reino Unido",
+              "horarios": "Segundas e Quintas, 19:30-21:00",
+              "localizacao": [
+                "Inglaterra",
+                "Londres",
+                "Londres"
+              ],
+              "coordenadas": [
+                51.5085300,
+                -0.1257400
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Alemanha",
+      "estados": [
+        {
+          "nome": "Berlim",
+          "nucleos": [
+            {
+              "nome": "Berlim",
+              "responsavel": "Treinel Mercúrio",
+              "contato": "Instagram: @mercurio",
+              "endereco": "Brunnenstraße 183, 10119 Berlin, Alemanha",
+              "horarios": "Quartas e Sextas, 20:00-22:00",
+              "localizacao": [
+                "Alemanha",
+                "Berlim",
+                "Berlim"
+              ],
+              "coordenadas": [
+                52.5243700,
+                13.4105300
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

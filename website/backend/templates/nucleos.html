@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+
+{% block title %}Núcleos{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="nucleos-column">
+        <h1>Núcleos</h1>
+        
+        <button id="toggleMap" class="map-toggle-btn">
+            <span class="show-text">Ocultar Mapa</span>
+            <span class="hide-text" style="display:none">Mostrar Mapa</span>
+        </button>
+
+        <!-- Mapa OpenStreetMap -->
+        <div id="map" style="height: 500px; width: 100%; margin-bottom: 30px;"></div>
+
+        <!-- Leaflet CSS -->
+        <link 
+            rel="stylesheet" 
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            crossorigin="anonymous"
+        />
+
+        {% if data %}
+            {% for pais in data.paises %}
+                <section class="country-section">
+                    <h2>{{ pais.nome }}</h2>
+                    <div class="state-container">
+                        {% for estado in pais.estados %}
+                            <div class="state-group">
+                                <h3>{{ estado.nome }}</h3>
+                                <ul class="nucleo-list">
+                                    {% for nucleo in estado.nucleos %}
+                                        <li class="nucleo-item">
+                                            <h4><strong>{{ nucleo.nome }}</strong></h4>
+                                            <div class="info responsavel"><strong>Responsável:</strong> {{ nucleo.responsavel }}</div>
+                                            <div class="info contato"><strong>Contato:</strong> {{ nucleo.contato }}</div>
+                                            <div class="info endereco"><strong>Endereço:</strong> {{ nucleo.endereco }}</div>
+                                            <div class="info horarios"><strong>Horários:</strong> {{ nucleo.horarios }}</div>
+                                            {% if nucleo.localizacao and nucleo.localizacao | length >= 3 %}
+                                                <div class="localizacao">
+                                                    Localização: {{ nucleo.localizacao[0] }}, {{ nucleo.localizacao[1] }}, {{ nucleo.localizacao[2] }}
+                                                </div>
+                                            <meta 
+                                            class="coordenada" 
+                                            data-lat="{{ nucleo.coordenadas[0] }}" 
+                                            data-lng="{{ nucleo.coordenadas[1] }}"
+                                            >
+                                            {% endif %}
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </section>
+                <br>
+            {% endfor %}
+        {% else %}
+            <p>Nenhum núcleo cadastrado.</p>
+        {% endif %}
+    </div>
+    <div id="map-container" class="map-column">
+        <div id="map"></div>
+    </div>
+</div>
+
+    <!-- Leaflet JS -->
+    <script 
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        crossorigin="anonymous"
+    ></script>
+
+    <style>
+        .map-toggle-btn {
+            background-color: #713d26;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        
+        .map-hidden {
+            display: none !important;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Elementos do DOM
+            const toggleBtn = document.getElementById('toggleMap');
+            const showText = toggleBtn.querySelector('.show-text');
+            const hideText = toggleBtn.querySelector('.hide-text');
+            const mapDiv = document.getElementById('map');
+            
+            // Inicialização do mapa
+            const map = L.map('map').setView([0, 0], 2);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+            
+            // Configuração dos marcadores (seu código existente)
+            const nucleos = document.querySelectorAll('.nucleo-item');
+            const bounds = [];
+            
+            nucleos.forEach(nucleo => {
+                const coordenadaMeta = nucleo.querySelector('.coordenada');
+                if(!coordenadaMeta) return;
+                
+                const lat = parseFloat(coordenadaMeta.dataset.lat);
+                const lng = parseFloat(coordenadaMeta.dataset.lng);
+                
+                if(isNaN(lat) || isNaN(lng)) return;
+                
+                const marker = L.marker([lat, lng]).addTo(map);
+                bounds.push([lat, lng]);
+        
+                // Extrai dados
+                const getText = (selector) => {
+                    const el = nucleo.querySelector(selector);
+                    return el ? el.textContent.replace(/^\s+|\s+$/g, '') : '';
+                };
+        
+                const popupContent = `
+                    <b>${getText('h4')}</b><br>
+                    <b>Responsável:</b> ${getText('.responsavel').replace('Responsável: ', '')}<br>
+                    <b>Contato:</b> ${getText('.contato').replace('Contato: ', '')}<br>
+                    <b>Endereço:</b> ${getText('.endereco').replace('Endereço: ', '')}<br>
+                    <b>Horários:</b> ${getText('.horarios').replace('Horários: ', '')}
+                `;
+        
+                marker.bindPopup(popupContent);
+        
+                // Interatividade
+                marker.on('click', () => nucleo.classList.add('highlighted'));
+                marker.on('popupclose', () => nucleo.classList.remove('highlighted'));
+            });
+        
+            if(bounds.length > 0) {
+                map.fitBounds(bounds);
+            }
+            toggleBtn.addEventListener('click', () => {
+                mapDiv.classList.toggle('map-hidden');
+                showText.style.display = showText.style.display === 'none' ? 'inline' : 'none';
+                hideText.style.display = hideText.style.display === 'none' ? 'inline' : 'none';
+                
+                // Redimensiona o mapa quando reaparece para evitar problemas de renderização
+                if(!mapDiv.classList.contains('map-hidden')) {
+                    setTimeout(() => {
+                        map.invalidateSize();
+                    }, 100);
+                }
+            });
+        });
+        </script>
+{% endblock %}
